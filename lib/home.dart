@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
 import 'package:flutter_app/components/horizontal_listview.dart';
+import 'package:flutter_app/components/products.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -123,6 +125,18 @@ class _HomePageState extends State<HomePage> {
           ),
 
           // Horizontal list view begins here
+          HorizontalList(),
+
+          new Padding(padding: const EdgeInsets.all(20.0),
+            child: new Text('Recent Products'),
+          ),
+
+          // grid view
+          Container(
+            height: 320.0,
+            child: Products()
+          )
+
         ],
       ),
     );
